@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" ng-app="carShowroom">
+  <head>
+    <meta charset="utf-8">
+    <title>Google Phone Gallery</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="app.css" />
+
+    <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous"/>
+
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+    <script src="nav/z-nav.module.js"></script>
+    <script src="nav/z-nav.component.js"></script>
+    <script src="home/z-home.module.js"></script>
+    <script src="home/z-home.component.js"></script>
+    <script src="views/cars/z-cars.module.js"></script>
+    <script src="views/cars/z-cars.component.js"></script>
+    <script src="services/service.js"></script>
+    <script src="services/car-service.js"></script>
+
+    <script src="phone-list/phone-list.module.js"></script>
+    <script src="phone-list/phone-list.component.js"></script>
+    <script src="phone-detail/phone-detail.module.js"></script>
+    <script src="phone-detail/phone-detail.component.js"></script>
+  </head>
+  <body>
+
+    <z-nav></z-nav>
+    <div ng-view></div>
+
+  </body>
+</html>
