@@ -5,7 +5,6 @@ angular.
   config(['$locationProvider' ,'$routeProvider', '$httpProvider',
     function config($locationProvider, $routeProvider, $httpProvider) {
       $httpProvider.defaults.useXDomain = true;
-      delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
     $locationProvider.hashPrefix('!');
 
@@ -19,6 +18,12 @@ angular.
         when('/cars', {
           template: '<z-cars></z-cars>'
         }).
+        when('/car/add', {
+          template: '<z-add-cars></z-add-cars>'
+        }).
+        when('/test-ride', {
+          template: '<test-ride></test-ride>'
+      }).
         otherwise('/home');
     }
   ]);

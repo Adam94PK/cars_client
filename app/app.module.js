@@ -6,5 +6,7 @@ angular.module('carShowroom', [
   'zNav',
   'zHome',
   'zCars',
+  'zAddCars',
+  'testRide',
   'service'
 ]);

@@ -1,4 +1,15 @@
 <h1>Wszystkie dostępne samochody</h1>
-<ol>
-    <li ng-repeat="car in cars">{{car}}</li>
-</ol>
+<div ng-repeat="car in cars">
+    <h2>{{car.make}}&nbsp;{{car.model}}</h2>
+    <div class="carInfo">
+        <p>Model: <span class="bold">{{car.model}}</span></p>
+        <p>Year: <span class="bold">{{car.year}}</span></p>
+        <p>Price: <span class="bold">{{car.price}}</span></p>
+        <p>Nr Vin: <span class="bold">{{car.vin}}</span></p>
+    </div>
+    <div class="galery">
+        <div ng-repeat="photo in car.photos" class="photoCarGalery">
+            <img src="{{adress + '/' + photo.url}}">
+        </div>
+    </div>
+</div>

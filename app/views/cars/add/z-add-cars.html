@@ -1,0 +1,23 @@
+<h1>Add new car</h1>
+<div>
+    <p><label>Make</label><input type="text" ng-model="car.make"></p>
+    <p><label>Model</label><input type="text" ng-model="car.model"></p>
+    <p><label>Vin</label><input type="text" ng-model="car.vin"></p>
+    <p><label>Year</label><input type="number" ng-model="car.year" ng-init="car.year=2017" min="1900" max="2018" ng-step="1" ></p>
+    <p><label>Price</label><input type="number" ng-model="car.price" step="1000"></p>
+    <p><label>Visible</label><input type="checkbox" ng-model="car.visible"></p>
+    <button class="btn btn-success" ng-click="saveCar(car)">Submit</button>
+
+    <span ng-if="car.id">
+        <label>Pictures</label>
+        <button ngf-select="uploadFiles($files, car)" multiple accept="image/*">Select pictures</button>
+        <br>
+        Files
+        <br>
+        <ul>
+            <li ng-repeat="f in files">{{f.name}}</li>
+        </ul>
+        <span>progress = {{progress}}</span>
+        <br>
+    </span>
+</div>

@@ -5,6 +5,7 @@ angular.module('zCars').
   component('zCars', {
     templateUrl: 'views/cars/z-cars.tempalte.html',
     controller: ['$scope', 'CarService', function ZCarsController($scope, CarService){
+      $scope.adress = CarService.addres;
       CarService.getCars().then( function (response) {
         $scope.cars = response.data;
       });
