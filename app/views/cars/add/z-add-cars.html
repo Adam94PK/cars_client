@@ -1,12 +1,33 @@
-<h1>Add new car</h1>
-<div>
-    <p><label>Make</label><input type="text" ng-model="car.make"></p>
-    <p><label>Model</label><input type="text" ng-model="car.model"></p>
-    <p><label>Vin</label><input type="text" ng-model="car.vin"></p>
-    <p><label>Year</label><input type="number" ng-model="car.year" ng-init="car.year=2017" min="1900" max="2018" ng-step="1" ></p>
-    <p><label>Price</label><input type="number" ng-model="car.price" step="1000"></p>
-    <p><label>Visible</label><input type="checkbox" ng-model="car.visible"></p>
-    <button class="btn btn-success" ng-click="saveCar(car)">Submit</button>
+<link href="css/subpages.css" rel="stylesheet">
+
+<div style="text-align: center">
+    <h1><strong>Add new car to database</strong></h1> <br/>
+
+
+    <div class="col-sm-3"><br/></div>
+    <div class="col-sm-1"><img src="/img/cars/car2.png"/></div>
+
+    <div class="col-sm-3" style="text-align: right">
+        <p><label>Make</label></p>
+        <p><label>Model</label></p>
+        <p><label>Vin</label></p>
+        <p><label>Year</label></p>
+        <p><label>Price</label></p>
+        <p><label>Visible</label></p>
+    </div>
+
+    <div class="col-sm-5" style="text-align: left">
+
+        <p><input type="text" ng-model="car.make"></p>
+        <p><input type="text" ng-model="car.model"></p>
+        <p><input type="text" ng-model="car.vin"></p>
+        <p><input type="number" ng-model="car.year" ng-init="car.year=2017" min="1900" max="2018" ng-step="1"></p>
+        <p><input type="number" ng-model="car.price" step="1000"></p>
+        <p><input type="checkbox" ng-model="car.visible"></p>
+
+        <button class="btn btn-primary" ng-click="saveCar(car)">Submit</button>
+
+    </div>
 
     <span ng-if="car.id">
         <label>Pictures</label>
