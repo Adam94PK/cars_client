@@ -26,7 +26,13 @@ angular.
         }).
         when('/test-ride/all', {
           template: '<test-ride-all></test-ride-all>'
-      }).
+        }).
+        when('/contact' , {
+          templateUrl: 'views/contact/contact.template.html'
+        }).
+        when('/about', {
+        templateUrl: 'views/about/about.template.html'
+        }).
         otherwise('/home');
     }
   ]);

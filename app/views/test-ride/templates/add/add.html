@@ -1,26 +1,44 @@
-<h1>Book your test ride</h1>
-
-<div>
-    <p><label>Ride date</label><input ng-model="testRide.rideDate" bs-datepicker></p>
-    <p><label>First name</label><input type="text" ng-model="user.name"></p>
-    <p><label>Last name</label><input type="text" ng-model="user.surname"></p>
-    <p><label>Phone number</label><input type="text" ng-model="user.phone"></p>
-    <p><label>Email</label><input type="email" ng-model="user.email"></p>
+<div style="text-align: center">
+    <h1><strong>Book your test ride</strong></h1>
 
     <div>
-        <h1>Select car</h1>
-        <div>
-            <span>
-                <i class="fa fa-search" aria-hidden="true">Search</i>
-                <input type="text" ng-model="filter">
-            </span>
-            <button type="button" class="btn btn-default" ng-model="selectedCar" data-html="1" data-toggle="true" bs-options="car as car.model for car in cars" bs-select>
-                Action <span class="caret"></span>
-            </button>
+        <br/>
+        <div class="row">
+            <div class="col-sm-6" style="text-align: right">
+                <p><label>Ride date:&nbsp;</label></p>
+                <p><label>First name:&nbsp;</label></p>
+                <p><label>Last name:&nbsp;</label></p>
+                <p><label>Phone number:&nbsp;</label></p>
+                <p><label>Email:&nbsp;</label></p>
+                <p><label>Select car:&nbsp;</label></p>
+            </div>
+            <div class="col-sm-6" style="text-align: left">
+                <p><input ng-model="testRide.rideDate" bs-datepicker></p>
+                <p><input type="text" ng-model="user.name"></p>
+                <p><input type="text" ng-model="user.surname"></p>
+                <p><input type="text" ng-model="user.phone"></p>
+                <p><input type="email" ng-model="user.email"></p>
+                <p>
+                    <button type="button" class="btn btn-default" ng-model="selectedCar" data-html="1"
+                            data-toggle="true"
+                            bs-options="car as car.model for car in cars" bs-select>
+                        Action <span class="caret"></span>
+                    </button>
+                </p>
+            </div>
         </div>
+        <div class="row">
+            <br/>
+            <p><strong>To find a car quicker, insert some key words</strong><br/>
+                <i class="fa fa-search" aria-hidden="true"></i> &nbsp; <input type="text" ng-model="filter"></p> <br/>
+        </div>
+
+        <button type="submit" class="btn btn-primary" ng-click="saveTestRide(user, testRide, selectedCar)">Submit
+        </button>
+        <br/><br/><br/>
     </div>
 
-    <button type="submit" ng-click="saveTestRide(user, testRide, selectedCar)">Submit</button>
+    <a href="#!/test-ride/all">
+        <button class="btn btn-success">Show all test Rides</button>
+    </a>
 </div>
-
-<a href="#!/test-ride/all"><button class="btn btn-success">Show all test Rides</button></a>
