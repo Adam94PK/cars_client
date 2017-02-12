@@ -1,1 +1,1 @@
-angular.module('zCars', ['service.car']);
+angular.module('zCars', ['service.car', 'ngSanitize']);

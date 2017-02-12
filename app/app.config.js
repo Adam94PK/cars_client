@@ -21,8 +21,11 @@ angular.
         when('/car/add', {
           template: '<z-add-cars></z-add-cars>'
         }).
-        when('/test-ride', {
-          template: '<test-ride></test-ride>'
+        when('/test-ride/add', {
+          template: '<test-ride-add></test-ride-add>'
+        }).
+        when('/test-ride/all', {
+          template: '<test-ride-all></test-ride-all>'
       }).
         otherwise('/home');
     }

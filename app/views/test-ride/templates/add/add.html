@@ -1,0 +1,26 @@
+<h1>Book your test ride</h1>
+
+<div>
+    <p><label>Ride date</label><input ng-model="testRide.rideDate" bs-datepicker></p>
+    <p><label>First name</label><input type="text" ng-model="user.name"></p>
+    <p><label>Last name</label><input type="text" ng-model="user.surname"></p>
+    <p><label>Phone number</label><input type="text" ng-model="user.phone"></p>
+    <p><label>Email</label><input type="email" ng-model="user.email"></p>
+
+    <div>
+        <h1>Select car</h1>
+        <div>
+            <span>
+                <i class="fa fa-search" aria-hidden="true">Search</i>
+                <input type="text" ng-model="filter">
+            </span>
+            <button type="button" class="btn btn-default" ng-model="selectedCar" data-html="1" data-toggle="true" bs-options="car as car.model for car in cars" bs-select>
+                Action <span class="caret"></span>
+            </button>
+        </div>
+    </div>
+
+    <button type="submit" ng-click="saveTestRide(user, testRide, selectedCar)">Submit</button>
+</div>
+
+<a href="#!/test-ride/all"><button class="btn btn-success">Show all test Rides</button></a>
