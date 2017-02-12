@@ -9,5 +9,6 @@ angular.module('carShowroom', [
   'zAddCars',
   'testRide',
   'service',
+  'loging',
   'mgcrea.ngStrap'
 ]);

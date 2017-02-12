@@ -33,6 +33,12 @@ angular.
         when('/about', {
         templateUrl: 'views/about/about.template.html'
         }).
+        when('/register', {
+          template: '<add-user></add-user>'
+        }).
+        when('/login', {
+          template: '<login></login>'
+        }).
         otherwise('/home');
     }
   ]);

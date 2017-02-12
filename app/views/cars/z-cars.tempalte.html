@@ -1,4 +1,6 @@
-<h1>Wszystkie dostępne samochody</h1>
+<div style="text-align: center">
+    <h1>Wszystkie dostępne samochody</h1>
+</div>
 <div ng-repeat="car in cars">
     <h2>{{car.make}}&nbsp;{{car.model}}</h2>
     <div class="carInfo">
@@ -9,7 +11,7 @@
     </div>
     <div class="galery">
         <div ng-repeat="photo in car.photos" class="photoCarGalery">
-            <img src="{{adress + '/' + photo.url}}">
+            <img src="{{adress + '/' + photo.url}}" style="height: 200px;">
         </div>
     </div>
 </div>
